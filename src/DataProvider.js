@@ -14,12 +14,14 @@ class DataProvider extends Component {
 
     async componentDidMount() {
         const url = "https://json-server-heroku-svoqwyfacm.now.sh/podcasts";
-        const response = await fetch(url);
-        const data = await response.json();
-        this.setState({
-            podcast: data,
-            loading: false
-        })
+        if(this.state.podcasts == null) {
+            const response = await fetch(url);
+            const data = await response.json();
+            this.setState({
+                podcast: data,
+                loading: false
+            })
+        }
     }
 
     findPodcast = (keyword) => {
