@@ -14,7 +14,7 @@ class DataProvider extends Component {
 
     async componentDidMount() {
         const url = "https://json-server-heroku-svoqwyfacm.now.sh/podcasts";
-        if(this.state.podcasts == null) {
+        if(this.state.podcast == null) {
             const response = await fetch(url);
             const data = await response.json();
             this.setState({
