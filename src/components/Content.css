@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 500px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    padding-top: 95px;
+}
+
+.podcast-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+
+.podcast-item {
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 0px 6px 25px -7px rgba(117, 117, 117, 0.34);
+    -moz-box-shadow: 0px 6px 25px -7px #75757557;
+    box-shadow: 0px 6px 25px -7px rgba(117, 117, 117, 0.34);
+    transition: all .6s;
+}
+
+.podcast-item:hover {
+    -webkit-box-shadow: 0px 6px 25px -7px rgba(117, 117, 117, 0.8);
+    -moz-box-shadow: 0px 6px 25px -7px #75757557;
+    box-shadow: 0px 6px 25px -7px rgba(117, 117, 117, 0.8);
+}
+
+.podcast-item .podcast-thumbnail {
+    width: 100%;
+    height: 200px;
+    flex: 0 0 200px;
+    overflow: hidden;
+}
+
+.podcast-item .podcast-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.podcast-item a {
+    text-decoration: none;
+}
+
+.podcast-track-count {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    padding: 10px;
+    color: #FFF;
+    border-radius: 20px;
+    background-image: linear-gradient(45deg, #9f2fff 0%, #0bb1d3 100%);
+    background-size: 200% auto;
+    transition: all .5s;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.podcast-item:hover .podcast-track-count {
+    background-position: right center;
+}
+
+.podcast-track-count svg {
+    width: 14px;
+    margin-right: 3px;
+    fill: #FFF;
+}
+
+.podcast-item .podcast-info {
+    padding: 15px;
+    color: #FFF;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, .8) 12%, rgba(0, 0, 0, 0) 100%);
+    background-size: 100% auto;
+    transition: all .5s;
+}
+
+.podcast-item:hover .podcast-info {
+    background-size: 200% auto;
+}
+
+.podcast-item .podcast-info h2 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 0 5px 5px;
+    position: absolute;
+    bottom: 15px;
+}
+
+.search-form-wrapper {
+    margin-bottom: 20px;
+}
+
+.search-form-wrapper fieldset {
+    padding: 0;
+    border: 0;
+    display: flex;
+}
+
+.search-form-wrapper fieldset .field:not(.action) {
+    flex: 1 1 auto;
+    margin-right: 10px;
+}
+
+.search-form-wrapper .search-field {
+    color: #6e6d7a;
+    padding: 0 12px 0 12px;
+    height: 40px;
+    line-height: 24px;
+    background-color: #f3f3f4;
+    border-radius: 40px;
+    border: none;
+    width: 100%;
+}
+
+.search-form-wrapper .button.submit {
+    height: 40px;
+    border-radius: 40px;
+    line-height: 24px;
+    padding: 0px 12px;
+    border: none;
+    background-image: linear-gradient(45deg, #9f2fff 0%, #0bb1d3 100%);
+    color: #FFF;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .5s;
+    background-size: 200% auto;
+    display: flex;
+    align-items: center;
+}
+
+.search-form-wrapper .button.submit svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    fill: #fff;
+}
+
+.search-form-wrapper .button.submit:hover {
+    background-position: right center;
+}
